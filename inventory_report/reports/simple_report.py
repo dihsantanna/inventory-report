@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class SimpleReport:
     @staticmethod
     def generate(list: list):
@@ -5,21 +8,9 @@ class SimpleReport:
 
         closest_date = min(item["data_de_validade"] for item in list)
 
-        companies = [comp["nome_da_empresa"] for comp in list]
-        company = ""
-        memory = []
-        memoryCount = 0
-
-        for item in companies:
-            if item in memory:
-                continue
-
-            count = companies.count(item)
-
-            if count > memoryCount:
-                memoryCount = count
-                company = item
-            memory.append(item)
+        company = Counter(
+            item["nome_da_empresa"] for item in list
+        ).most_common(1)[0][0]
 
         return (
             f"Data de fabricação mais antiga: {oldest_date}\n"

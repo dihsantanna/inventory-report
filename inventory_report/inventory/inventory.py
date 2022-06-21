@@ -17,18 +17,16 @@ class Inventory:
     def import_data(cls, path, type):
         product_list = list()
 
-        if path.endswith(".csv"):
-            with open(path, encoding="utf-8") as file:
+        with open(path, encoding="utf-8") as file:
+            if path.endswith(".csv"):
                 reader = csv.reader(file, delimiter=",", quotechar='"')
                 header, *rows = reader
                 product_list = list(dict(zip(header, row)) for row in rows)
 
-        elif path.endswith(".json"):
-            with open(path, encoding="utf-8") as file:
+            elif path.endswith(".json"):
                 product_list = json.load(file)
 
-        elif path.endswith(".xml"):
-            with open(path, encoding="utf-8") as file:
+            elif path.endswith(".xml"):
                 products = xmltodict.parse(file.read())["dataset"]["record"]
                 product_list = products
 

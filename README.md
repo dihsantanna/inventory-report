@@ -63,7 +63,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   - Use o comando: `git clone git@github.com:dihsantanna/inventory-report.git`
   - Entre na pasta do repositório que você acabou de clonar:
-    - `cd sd-014-b-inventory-report`
+    - `cd inventory-report`
 
   2. Crie o ambiente virtual para o projeto
 

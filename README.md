@@ -61,7 +61,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   1. Clone o repositório
 
-  - Use o comando: `git clone git@github.com:tryber/sd-014-b-inventory-report.git`
+  - Use o comando: `git clone git@github.com:dihsantanna/inventory-report.git`
   - Entre na pasta do repositório que você acabou de clonar:
     - `cd sd-014-b-inventory-report`
 
